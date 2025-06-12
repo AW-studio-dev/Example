@@ -1,0 +1,1780 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DZADS | 2025 - الإعلانات الجزائرية</title>
+    <style>
+        /* Global Styles */
+        :root {
+            --primary-color: #005f40; 
+            --secondary-color: #FFA500; 
+            --accent-color: #FFC04D;
+            --light-color: #f8f9fa;
+            --dark-color: #212529;
+            --text-color: #333;
+            --text-light: #6c757d;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Tajawal', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        body {
+            background-color: var(--light-color);
+            color: var(--text-color);
+            line-height: 1.6;
+            overflow-x: hidden;
+            position: relative;
+        }
+
+        body::before {
+            content: "";
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-image: 
+                radial-gradient(circle at 20% 30%, rgba(0, 95, 64, 0.05) 0%, transparent 20%),
+                radial-gradient(circle at 80% 70%, rgba(255, 165, 0, 0.05) 0%, transparent 25%),
+                radial-gradient(ellipse at 30% 80%, rgba(0, 95, 64, 0.04) 0%, transparent 30%),
+                radial-gradient(ellipse at 70% 20%, rgba(255, 165, 0, 0.04) 0%, transparent 30%);
+            pointer-events: none;
+            z-index: -1;
+        }
+
+        body[dir="ltr"] {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        a {
+            text-decoration: none;
+            color: inherit;
+            transition: all 0.3s ease;
+        }
+
+        a:hover {
+            color: var(--secondary-color);
+        }
+
+        .container {
+            max-width: 1400px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        .btn {
+            display: inline-block;
+            padding: 12px 24px;
+            background-color: var(--secondary-color);
+            color: white;
+            border-radius: 30px;
+            font-weight: 600;
+            transition: all 0.3s ease;
+            border: none;
+            cursor: pointer;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            font-size: 14px;
+        }
+
+        .btn:hover {
+            background-color: var(--accent-color);
+            transform: translateY(-3px);
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+        }
+
+        .btn-outline {
+            background-color: transparent;
+            border: 2px solid var(--secondary-color);
+            color: var(--secondary-color);
+        }
+
+        .btn-outline:hover {
+            background-color: var(--secondary-color);
+            color: white;
+        }
+
+        section {
+            padding: 60px 0;
+        }
+
+        .section-title {
+            font-size: 2.5rem;
+            margin-bottom: 40px;
+            position: relative;
+            display: inline-block;
+            color: var(--secondary-color);
+        }
+
+        .section-title::after {
+            content: '';
+            position: absolute;
+            bottom: -10px;
+            right: 0;
+            width: 50%;
+            height: 4px;
+            background-color: var(--secondary-color);
+            border-radius: 2px;
+        }
+
+        body[dir="ltr"] .section-title::after {
+            right: auto;
+            left: 0;
+        }
+
+        /* Header Styles */
+        header {
+            background-color: white;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+            position: fixed;
+            width: 100%;
+            top: 0;
+            z-index: 1000;
+            transition: all 0.3s ease;
+        }
+
+        header.scrolled {
+            padding: 10px 0;
+            background-color: rgba(255, 255, 255, 0.95);
+            backdrop-filter: blur(10px);
+        }
+
+        .header-container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 20px 0;
+        }
+
+        .logo {
+            font-size: 1.8rem;
+            font-weight: 700;
+            color: var(--primary-color);
+        }
+
+        .logo span {
+            color: var(--secondary-color);
+        }
+
+        nav ul {
+            display: flex;
+            list-style: none;
+        }
+
+        nav ul li {
+            margin-left: 30px;
+        }
+
+        body[dir="rtl"] nav ul li {
+            margin-left: 0;
+            margin-right: 30px;
+        }
+
+        nav ul li a {
+            font-weight: 600;
+            position: relative;
+        }
+
+        nav ul li a::after {
+            content: '';
+            position: absolute;
+            bottom: -5px;
+            right: 0;
+            width: 0;
+            height: 2px;
+            background-color: var(--secondary-color);
+            transition: width 0.3s ease;
+        }
+
+        body[dir="ltr"] nav ul li a::after {
+            right: auto;
+            left: 0;
+        }
+
+        nav ul li a:hover::after {
+            width: 100%;
+        }
+
+        .mobile-menu-btn {
+            display: none;
+            background: none;
+            border: none;
+            font-size: 1.5rem;
+            color: var(--primary-color);
+            cursor: pointer;
+        }
+
+        .language-switcher {
+            margin-right: 20px;
+        }
+
+        body[dir="rtl"] .language-switcher {
+            margin-right: 0;
+            margin-left: 20px;
+        }
+
+        .language-switcher button {
+            background: none;
+            border: none;
+            color: var(--primary-color);
+            font-weight: 600;
+            cursor: pointer;
+            padding: 5px 10px;
+            border-radius: 5px;
+            transition: all 0.3s ease;
+        }
+
+        .language-switcher button.active {
+            background-color: var(--primary-color);
+            color: white;
+        }
+
+        .language-switcher button:hover {
+            color: var(--secondary-color);
+        }
+
+        /* Featured Ads Section */
+        .featured-ads {
+            background-color: white;
+            padding-top: 100px;
+        }
+
+        .ads-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+            gap: 30px;
+        }
+
+        .ad-card {
+            background-color: white;
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+            transition: all 0.3s ease;
+            position: relative;
+            cursor: pointer;
+            opacity: 0;
+            transform: translateY(30px);
+            animation: fadeInUp 0.6s ease forwards;
+        }
+
+        @keyframes fadeInUp {
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .ad-card:nth-child(1) { animation-delay: 0.1s; }
+        .ad-card:nth-child(2) { animation-delay: 0.2s; }
+        .ad-card:nth-child(3) { animation-delay: 0.3s; }
+        .ad-card:nth-child(4) { animation-delay: 0.4s; }
+        .ad-card:nth-child(5) { animation-delay: 0.5s; }
+        .ad-card:nth-child(6) { animation-delay: 0.6s; }
+        .ad-card:nth-child(7) { animation-delay: 0.7s; }
+        .ad-card:nth-child(8) { animation-delay: 0.8s; }
+        .ad-card:nth-child(9) { animation-delay: 0.9s; }
+        .ad-card:nth-child(10) { animation-delay: 1s; }
+
+        .ad-card:hover {
+            transform: translateY(-10px) scale(1.02);
+            box-shadow: 0 15px 30px rgba(0, 0, 0, 0.15);
+        }
+
+        .ad-card-img {
+            height: 220px;
+            width: 100%;
+            object-fit: cover;
+            transition: all 0.5s ease;
+        }
+
+        .ad-card:hover .ad-card-img {
+            transform: scale(1.1);
+        }
+
+        .ad-card-content {
+            padding: 20px;
+            text-align: right;
+        }
+
+        body[dir="ltr"] .ad-card-content {
+            text-align: left;
+        }
+
+        .ad-card h3 {
+            font-size: 1.3rem;
+            margin-bottom: 10px;
+            color: var(--primary-color);
+        }
+
+        .ad-card p {
+            color: var(--text-light);
+            margin-bottom: 15px;
+        }
+
+        .ad-price {
+            font-weight: bold;
+            color: var(--primary-color);
+            font-size: 1.2rem;
+            margin-bottom: 10px;
+        }
+
+        .ad-location {
+            display: flex;
+            align-items: center;
+            color: var(--text-light);
+            font-size: 0.9rem;
+            margin-bottom: 10px;
+        }
+
+        .ad-card-tag {
+            display: inline-block;
+            padding: 5px 10px;
+            background-color: var(--light-color);
+            color: var(--primary-color);
+            border-radius: 20px;
+            font-size: 0.8rem;
+            font-weight: 600;
+            margin-left: 5px;
+        }
+
+        body[dir="ltr"] .ad-card-tag {
+            margin-left: 0;
+            margin-right: 5px;
+        }
+
+        /* Stats Section */
+        .stats {
+            background: linear-gradient(135deg, var(--primary-color) 0%, #007050 100%);
+            color: white;
+            text-align: center;
+        }
+
+        .stats-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 30px;
+        }
+
+        .stat-item {
+            padding: 30px;
+            background-color: rgba(255, 255, 255, 0.1);
+            border-radius: 10px;
+            backdrop-filter: blur(5px);
+            transition: all 0.3s ease;
+            opacity: 0;
+            transform: translateY(30px);
+        }
+
+        .stat-item.animated {
+            opacity: 1;
+            transform: translateY(0);
+            animation: fadeInUp 0.6s ease forwards;
+        }
+
+        .stat-number {
+            font-size: 3rem;
+            font-weight: 700;
+            margin-bottom: 10px;
+            color: var(--secondary-color);
+        }
+
+        .stat-label {
+            font-size: 1.1rem;
+            opacity: 0.9;
+        }
+
+        /* Categories Section */
+        .categories {
+            background-color: #f5f5f5;
+        }
+
+        .categories-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+            gap: 20px;
+        }
+
+        .category-card {
+            background-color: white;
+            border-radius: 10px;
+            padding: 20px;
+            text-align: center;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+            transition: all 0.3s ease;
+        }
+
+        .category-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+        }
+
+        .category-icon {
+            font-size: 2.5rem;
+            color: var(--primary-color);
+            margin-bottom: 15px;
+        }
+
+        /* Footer */
+        footer {
+            background-color: var(--dark-color);
+            color: white;
+            padding: 60px 0 20px;
+        }
+
+        .footer-content {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 40px;
+            margin-bottom: 40px;
+        }
+
+        .footer-column h3 {
+            font-size: 1.3rem;
+            margin-bottom: 20px;
+            color: var(--secondary-color);
+        }
+
+        .footer-column ul {
+            list-style: none;
+        }
+
+        .footer-column ul li {
+            margin-bottom: 10px;
+        }
+
+        .footer-column ul li a:hover {
+            color: var(--secondary-color);
+        }
+
+        .social-links {
+            display: flex;
+            gap: 15px;
+            margin-top: 20px;
+        }
+
+        body[dir="rtl"] .social-links {
+            justify-content: flex-end;
+        }
+
+        .social-links a {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 40px;
+            height: 40px;
+            background-color: rgba(255, 255, 255, 0.1);
+            border-radius: 50%;
+            transition: all 0.3s ease;
+        }
+
+        .social-links a:hover {
+            background-color: var(--secondary-color);
+            transform: translateY(-5px);
+        }
+
+        .footer-bottom {
+            text-align: center;
+            padding-top: 20px;
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+            color: rgba(255, 255, 255, 0.7);
+            font-size: 0.9rem;
+        }
+
+        /* Ad Modal */
+        .modal-overlay {
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background-color: rgba(0, 0, 0, 0.8);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            z-index: 2000;
+            opacity: 0;
+            visibility: hidden;
+            transition: all 0.3s ease;
+            backdrop-filter: blur(10px);
+        }
+
+        .modal-overlay.active {
+            opacity: 1;
+            visibility: visible;
+        }
+
+        .modal {
+            background-color: white;
+            border-radius: 10px;
+            max-width: 900px;
+            width: 90%;
+            max-height: 90vh;
+            overflow-y: auto;
+            position: relative;
+            transform: translateY(50px);
+            transition: all 0.3s ease;
+            box-shadow: 0 20px 50px rgba(0, 0, 0, 0.3);
+        }
+
+        .modal-overlay.active .modal {
+            transform: translateY(0);
+        }
+
+        .modal-close {
+            position: absolute;
+            top: 20px;
+            left: 20px;
+            background: none;
+            border: none;
+            font-size: 1.5rem;
+            cursor: pointer;
+            color: var(--text-light);
+            transition: all 0.3s ease;
+        }
+
+        body[dir="rtl"] .modal-close {
+            left: auto;
+            right: 20px;
+        }
+
+        .modal-close:hover {
+            color: var(--accent-color);
+            transform: rotate(90deg);
+        }
+
+        .modal-content {
+            padding: 40px;
+        }
+
+        .modal-img {
+            width: 100%;
+            height: 300px;
+            object-fit: cover;
+            border-radius: 5px;
+            margin-bottom: 20px;
+        }
+
+        .modal-title {
+            font-size: 2rem;
+            margin-bottom: 15px;
+            color: var(--primary-color);
+        }
+
+        .modal-price {
+            font-size: 1.5rem;
+            color: var(--secondary-color);
+            font-weight: bold;
+            margin-bottom: 15px;
+        }
+
+        .modal-location {
+            display: flex;
+            align-items: center;
+            margin-bottom: 20px;
+            color: var(--text-light);
+        }
+
+        .modal-subtitle {
+            font-size: 1.2rem;
+            color: var(--secondary-color);
+            margin-bottom: 20px;
+        }
+
+        .modal-text {
+            margin-bottom: 30px;
+            color: var(--text-light);
+            line-height: 1.8;
+            text-align: right;
+        }
+
+        body[dir="ltr"] .modal-text {
+            text-align: left;
+        }
+
+        .modal-features {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+            gap: 15px;
+            margin-bottom: 30px;
+        }
+
+        .feature-item {
+            display: flex;
+            align-items: center;
+        }
+
+        .feature-icon {
+            margin-left: 10px;
+            color: var(--primary-color);
+        }
+
+        body[dir="ltr"] .feature-icon {
+            margin-left: 0;
+            margin-right: 10px;
+        }
+
+        .modal-btns {
+            display: flex;
+            gap: 15px;
+        }
+
+        body[dir="rtl"] .modal-btns {
+            justify-content: flex-end;
+        }
+
+        .no-website {
+            display: none;
+        }
+
+        /* Animations */
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+            }
+            to {
+                opacity: 1;
+            }
+        }
+
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        @keyframes float {
+            0% {
+                transform: translateY(0px);
+            }
+            50% {
+                transform: translateY(-15px);
+            }
+            100% {
+                transform: translateY(0px);
+            }
+        }
+
+        .floating {
+            animation: float 3s ease-in-out infinite;
+        }
+
+        /* Responsive Styles */
+        @media (max-width: 992px) {
+            .section-title {
+                font-size: 2rem;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .header-container {
+                padding: 15px 0;
+            }
+
+            nav {
+                position: fixed;
+                top: 0;
+                left: -100%;
+                width: 80%;
+                max-width: 300px;
+                height: 100vh;
+                background-color: white;
+                box-shadow: 5px 0 20px rgba(0, 0, 0, 0.1);
+                transition: all 0.3s ease;
+                z-index: 1001;
+                padding: 80px 30px 30px;
+            }
+
+            body[dir="rtl"] nav {
+                left: auto;
+                right: -100%;
+                box-shadow: -5px 0 20px rgba(0, 0, 0, 0.1);
+            }
+
+            nav.active {
+                left: 0;
+            }
+
+            body[dir="rtl"] nav.active {
+                left: auto;
+                right: 0;
+            }
+
+            nav ul {
+                flex-direction: column;
+            }
+
+            nav ul li {
+                margin: 15px 0;
+            }
+
+            .mobile-menu-btn {
+                display: block;
+                z-index: 1002;
+            }
+
+            .section-title {
+                font-size: 1.8rem;
+            }
+
+            .modal-content {
+                padding: 30px 20px;
+            }
+        }
+
+        @media (max-width: 576px) {
+            section {
+                padding: 40px 0;
+            }
+
+            .ads-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .stats-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .modal-btns {
+                flex-direction: column;
+            }
+        }
+    </style>
+    <link href="https://fonts.googleapis.com/css2?family=Tajawal:wght@400;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+    <!-- Header -->
+    <header id="header">
+        <div class="container header-container">
+            <a href="#" class="logo">DZ<span>ADS</span></a>
+            <div class="language-switcher">
+                <button id="arBtn" class="active">العربية</button>
+                <button id="frBtn">Français</button>
+            </div>
+            <button class="mobile-menu-btn" id="mobileMenuBtn">☰</button>
+            <nav id="nav">
+                <ul>
+                    <li><a href="#home">الرئيسية</a></li>
+                    <li><a href="#featured">إعلانات مميزة</a></li>
+                    <li><a href="#categories">التصنيفات حسب المدن</a></li>
+                    <li><a href="#services">الخدمات/سجل</a></li>
+                    <li><a href="#blog">المدونة</a></li>
+                    <li><a href="#contact">اتصل بنا</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Featured Ads Section -->
+    <section class="featured-ads" id="featured">
+        <div class="container">
+            <h2 class="section-title">إعلانات مميزة</h2>
+            <div class="ads-grid">
+                <!-- Ad 1 - Real Estate -->
+                <div class="ad-card" data-modal="modal1">
+                    <img src="https://images.unsplash.com/photo-1564013799919-ab600027ffc6?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80" alt="فيلا للبيع في الجزائر العاصمة" class="ad-card-img">
+                    <div class="ad-card-content">
+                        <h3>فيلا فاخرة للبيع</h3>
+                        <p>فيلا حديثة 4 غرف في حي المرسى، مساحة 250م² مع حديقة وموقف سيارات</p>
+                        <div class="ad-price">4,500,000 دج</div>
+                        <div class="ad-location">
+                            <i class="fas fa-map-marker-alt"></i>
+                            <span>الجزائر العاصمة، المرسى</span>
+                        </div>
+                        <span class="ad-card-tag">عقارات</span>
+                        <span class="ad-card-tag">للبيع</span>
+                    </div>
+                </div>
+
+                <!-- Ad 2 - Vehicles -->
+                <div class="ad-card" data-modal="modal2">
+                    <img src="https://i.pinimg.com/736x/44/14/65/4414658a8c805f2bc3e4f9992f960e2c.jpg" alt="سيارة مرسيدس مستعملة" class="ad-card-img">
+                    <div class="ad-card-content">
+                        <h3>مرسيدس E200 2018</h3>
+                        <p>سيارة بحالة ممتازة، موديل 2018، مسافة 45,000 كم، لون أسود</p>
+                        <div class="ad-price">12,000,000 دج</div>
+                        <div class="ad-location">
+                            <i class="fas fa-map-marker-alt"></i>
+                            <span>وهران</span>
+                        </div>
+                        <span class="ad-card-tag">سيارات</span>
+                        <span class="ad-card-tag">مستعمل</span>
+                    </div>
+                </div>
+
+                <!-- Ad 3 - Electronics -->
+                <div class="ad-card" data-modal="modal3">
+                    <img src="https://images.unsplash.com/photo-1555774698-0b77e0d5fac6?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80" alt="هاتف سامسونج جديد" class="ad-card-img">
+                    <div class="ad-card-content">
+                        <h3>Samsung Galaxy S24 Ultra</h3>
+                        <p>جديد بالعلبة، ضمان سنتين، ذاكرة 256GB، شاشة 6.8 بوصة</p>
+                        <div class="ad-price">120,000 دج</div>
+                        <div class="ad-location">
+                            <i class="fas fa-map-marker-alt"></i>
+                            <span>قسنطينة</span>
+                        </div>
+                        <span class="ad-card-tag">إلكترونيات</span>
+                        <span class="ad-card-tag">جديد</span>
+                    </div>
+                </div>
+
+                <!-- Ad 4 - Jobs -->
+                <div class="ad-card" data-modal="modal4">
+                    <img src="https://images.unsplash.com/photo-1521791136064-7986c2920216?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80" alt="وظيفة مطور ويب" class="ad-card-img">
+                    <div class="ad-card-content">
+                        <h3>مطلوب مطور ويب</h3>
+                        <p>شركة ناشئة تبحث عن مطور ويب خبرة في React وNode.js، دوام كامل</p>
+                        <div class="ad-price">150,000 - 200,000 دج</div>
+                        <div class="ad-location">
+                            <i class="fas fa-map-marker-alt"></i>
+                            <span>عنابة</span>
+                        </div>
+                        <span class="ad-card-tag">وظائف</span>
+                        <span class="ad-card-tag">تكنولوجيا</span>
+                    </div>
+                </div>
+
+                <!-- Ad 5 - Services -->
+                <div class="ad-card" data-modal="modal5">
+                    <img src="https://i.pinimg.com/736x/22/2d/3a/222d3a6739cd52dd76765b53ab92221a.jpg" alt="خدمات كهربائية" class="ad-card-img">
+                    <div class="ad-card-content">
+                        <h3>فني كهرباء منازل</h3>
+                        <p>تركيب وصيانة جميع أعمال الكهرباء المنزلية، خدمة 24/7 في كل أنحاء العاصمة</p>
+                        <div class="ad-price">يبدأ من 3,000 دج</div>
+                        <div class="ad-location">
+                            <i class="fas fa-map-marker-alt"></i>
+                            <span>الجزائر العاصمة</span>
+                        </div>
+                        <span class="ad-card-tag">خدمات</span>
+                        <span class="ad-card-tag">كهرباء</span>
+                    </div>
+                </div>
+
+                <!-- Ad 6 - Fashion -->
+                <div class="ad-card" data-modal="modal6">
+                    <img src="https://images.unsplash.com/photo-1489987707025-afc232f7ea0f?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80" alt="ملابس تقليدية" class="ad-card-img">
+                    <div class="ad-card-content">
+                        <h3>قشابية جزائرية فاخرة</h3>
+                        <p>قشابية يدوية الصنع من الصوف الطبيعي، متوفرة بمقاسات مختلفة</p>
+                        <div class="ad-price">25,000 دج</div>
+                        <div class="ad-location">
+                            <i class="fas fa-map-marker-alt"></i>
+                            <span>تلمسان</span>
+                        </div>
+                        <span class="ad-card-tag">أزياء</span>
+                        <span class="ad-card-tag">تقليدي</span>
+                    </div>
+                </div>
+
+                <!-- Ad 7 - Furniture -->
+                <div class="ad-card" data-modal="modal7">
+                    <img src="https://images.unsplash.com/photo-1555041469-a586c61ea9bc?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80" alt="أثاث منزلي" class="ad-card-img">
+                    <div class="ad-card-content">
+                        <h3>طقم صالون إيطالي</h3>
+                        <p>طقم صالون فاخر من الجلد الطبيعي، 3+2+1، لون بني</p>
+                        <div class="ad-price">350,000 دج</div>
+                        <div class="ad-location">
+                            <i class="fas fa-map-marker-alt"></i>
+                            <span>بجاية</span>
+                        </div>
+                        <span class="ad-card-tag">أثاث</span>
+                        <span class="ad-card-tag">صالونات</span>
+                    </div>
+                </div>
+
+                <!-- Ad 8 - Education -->
+                <div class="ad-card" data-modal="modal8">
+                    <img src="https://images.unsplash.com/photo-1523050854058-8df90110c9f1?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80" alt="دورات تعليمية" class="ad-card-img">
+                    <div class="ad-card-content">
+                        <h3>دورات تعلم البرمجة</h3>
+                        <p>دورات مكثفة في تطوير الويب والهواتف، مدربون معتمدون، شهادات معترف بها</p>
+                        <div class="ad-price">30,000 دج/الشهر</div>
+                        <div class="ad-location">
+                            <i class="fas fa-map-marker-alt"></i>
+                            <span>سطيف</span>
+                        </div>
+                        <span class="ad-card-tag">تعليم</span>
+                        <span class="ad-card-tag">برمجة</span>
+                    </div>
+                </div>
+
+                <!-- Ad 9 - Agriculture -->
+                <div class="ad-card" data-modal="modal9">
+                    <img src="https://images.unsplash.com/photo-1500382017468-9049fed747ef?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80" alt="معدات زراعية" class="ad-card-img">
+                    <div class="ad-card-content">
+                        <h3>جرار زراعي جديد</h3>
+                        <p>جرار زراعي ماركة John Deere، موديل 2024، قوة 120 حصان</p>
+                        <div class="ad-price">8,500,000 دج</div>
+                        <div class="ad-location">
+                            <i class="fas fa-map-marker-alt"></i>
+                            <span>البليدة</span>
+                        </div>
+                        <span class="ad-card-tag">زراعة</span>
+                        <span class="ad-card-tag">معدات</span>
+                    </div>
+                </div>
+
+                <!-- Ad 10 - Pets -->
+                <div class="ad-card" data-modal="modal10">
+                    <img src="https://images.unsplash.com/photo-1586671267731-da2cf3ceeb80?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80" alt="كلاب للبيع" class="ad-card-img">
+                    <div class="ad-card-content">
+                        <h3>جراء جيرمن شيبرد</h3>
+                        <p>جراء سلالة نقية، عمر شهرين، مطعمة وجاهزة للتسليم</p>
+                        <div class="ad-price">50,000 دج</div>
+                        <div class="ad-location">
+                            <i class="fas fa-map-marker-alt"></i>
+                            <span>باتنة</span>
+                        </div>
+                        <span class="ad-card-tag">حيوانات</span>
+                        <span class="ad-card-tag">كلاب</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Categories Section -->
+    <section class="categories" id="categories">
+        <div class="container">
+            <h2 class="section-title">تصفح حسب التصنيف(إضافة مقترحة)</h2>
+            <div class="categories-grid">
+                <div class="category-card">
+                    <div class="category-icon">
+                        <i class="fas fa-home"></i>
+                    </div>
+                    <h3>عقارات</h3>
+                    <p>شقق، فيلات، أراضي، تجاري</p>
+                </div>
+                <div class="category-card">
+                    <div class="category-icon">
+                        <i class="fas fa-car"></i>
+                    </div>
+                    <h3>سيارات</h3>
+                    <p>جديدة، مستعملة، قطع غيار</p>
+                </div>
+                <div class="category-card">
+                    <div class="category-icon">
+                        <i class="fas fa-laptop"></i>
+                    </div>
+                    <h3>إلكترونيات</h3>
+                    <p>هواتف، أجهزة، كمبيوترات</p>
+                </div>
+                <div class="category-card">
+                    <div class="category-icon">
+                        <i class="fas fa-briefcase"></i>
+                    </div>
+                    <h3>وظائف</h3>
+                    <p>عمل، توظيف، فرص</p>
+                </div>
+                <div class="category-card">
+                    <div class="category-icon">
+                        <i class="fas fa-tshirt"></i>
+                    </div>
+                    <h3>أزياء</h3>
+                    <p>ملابس، إكسسوارات، أحذية</p>
+                </div>
+                <div class="category-card">
+                    <div class="category-icon">
+                        <i class="fas fa-couch"></i>
+                    </div>
+                    <h3>أثاث</h3>
+                    <p>منزلي، مكاتب، حدائق</p>
+                </div>
+                <div class="category-card">
+                    <div class="category-icon">
+                        <i class="fas fa-tools"></i>
+                    </div>
+                    <h3>خدمات</h3>
+                    <p>صيانة، بناء، نقل</p>
+                </div>
+                <div class="category-card">
+                    <div class="category-icon">
+                        <i class="fas fa-paw"></i>
+                    </div>
+                    <h3>حيوانات</h3>
+                    <p>كلاب، قطط، طيور</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Stats Section -->
+    <section class="stats">
+        <div class="container">
+            <h2 class="section-title">إحصائياتنا</h2>
+            <div class="stats-grid">
+                <div class="stat-item">
+                    <div class="stat-number">50,000+</div>
+                    <div class="stat-label">إعلان نشط</div>
+                </div>
+                <div class="stat-item">
+                    <div class="stat-number">58</div>
+                    <div class="stat-label">ولاية جزائرية</div>
+                </div>
+                <div class="stat-item">
+                    <div class="stat-number">200,000+</div>
+                    <div class="stat-label">زائر شهري</div>
+                </div>
+                <div class="stat-item">
+                    <div class="stat-number">15+</div>
+                    <div class="stat-label">تصنيف رئيسي</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-column">
+                    <h3>DZADS</h3>
+                    <p>المنصة الأولى للإعلانات المبوبة في الجزائر، نوفر لك مساحة لعرض منتجاتك وخدماتك</p>
+                    <div class="social-links">
+                        <a href="#"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-youtube"></i></a>
+                    </div>
+                </div>
+                <div class="footer-column">
+                    <h3>روابط سريعة</h3>
+                    <ul>
+                        <li><a href="#home">الرئيسية</a></li>
+                        <li><a href="#featured">إعلانات مميزة</a></li>
+                        <li><a href="#categories">التصنيفات</a></li>
+                        <li><a href="#cities">حسب المدن</a></li>
+                        <li><a href="#services">الخدمات</a></li>
+                        <li><a href="#blog">المدونة</a></li>
+                    </ul>
+                </div>
+                <div class="footer-column">
+                    <h3>المدن الرئيسية</h3>
+                    <ul>
+                        <li><a href="#">الجزائر العاصمة</a></li>
+                        <li><a href="#">وهران</a></li>
+                        <li><a href="#">قسنطينة</a></li>
+                        <li><a href="#">عنابة</a></li>
+                        <li><a href="#">بجاية</a></li>
+                        <li><a href="#">تيزي وزو</a></li>
+                    </ul>
+                </div>
+                <div class="footer-column">
+                    <h3>تصنيفات رئيسية</h3>
+                    <ul>
+                        <li><a href="#">عقارات</a></li>
+                        <li><a href="#">سيارات</a></li>
+                        <li><a href="#">إلكترونيات</a></li>
+                        <li><a href="#">وظائف</a></li>
+                        <li><a href="#">خدمات</a></li>
+                        <li><a href="#">أزياء</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>© 2025 DZADS. جميع الحقوق محفوظة. | AW Studio</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Ad Modals -->
+    <!-- Modal 1 - Real Estate -->
+    <div class="modal-overlay" id="modal1">
+        <div class="modal">
+            <button class="modal-close">&times;</button>
+            <div class="modal-content">
+                <img src="https://images.unsplash.com/photo-1564013799919-ab600027ffc6?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80" alt="فيلا للبيع في الجزائر العاصمة" class="modal-img">
+                <h2 class="modal-title">فيلا فاخرة للبيع في المرسى</h2>
+                <div class="modal-price">4,500,000 دج</div>
+                <div class="modal-location">
+                    <i class="fas fa-map-marker-alt"></i>
+                    <span>الجزائر العاصمة، حي المرسى</span>
+                </div>
+                <h3 class="modal-subtitle">وصف العقار</h3>
+                <p class="modal-text">فيلا حديثة للبيع في أحد أرقى أحياء العاصمة، تتكون من 4 غرف نوم واسعة، 3 حمامات، صالون كبير، مطبخ مجهز بالكامل، حديقة خاصة، وموقف سيارات يتسع لسيارتين. المساحة الإجمالية 250 متر مربع.</p>
+                <p class="modal-text">الموقع ممتاز بالقرب من البحر ومراكز التسوق والمدارس الدولية. العقار جاهز للسكن الفوري، التشطيب فاخر ومواد بناء عالية الجودة.</p>
+                
+                <h3 class="modal-subtitle">مميزات العقار</h3>
+                <div class="modal-features">
+                    <div class="feature-item">
+                        <i class="fas fa-bed feature-icon"></i>
+                        <span>4 غرف نوم</span>
+                    </div>
+                    <div class="feature-item">
+                        <i class="fas fa-bath feature-icon"></i>
+                        <span>3 حمامات</span>
+                    </div>
+                    <div class="feature-item">
+                        <i class="fas fa-ruler-combined feature-icon"></i>
+                        <span>250 م²</span>
+                    </div>
+                    <div class="feature-item">
+                        <i class="fas fa-car feature-icon"></i>
+                        <span>موقف سيارات</span>
+                    </div>
+                    <div class="feature-item">
+                        <i class="fas fa-tree feature-icon"></i>
+                        <span>حديقة</span>
+                    </div>
+                    <div class="feature-item">
+                        <i class="fas fa-warehouse feature-icon"></i>
+                        <span>قبو</span>
+                    </div>
+                </div>
+                
+                <div class="modal-btns">
+                    <a href="tel:+213123456789" class="btn">اتصل بالبائع</a>
+                    <a href="#" class="btn btn-outline">حفظ الإعلان</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal 2 - Vehicles -->
+    <div class="modal-overlay" id="modal2">
+        <div class="modal">
+            <button class="modal-close">&times;</button>
+            <div class="modal-content">
+                <img src="https://i.pinimg.com/736x/44/14/65/4414658a8c805f2bc3e4f9992f960e2c.jpg" alt="سيارة مرسيدس مستعملة" class="modal-img">
+                <h2 class="modal-title">Mercedes E200 2018</h2>
+                <div class="modal-price">12,000,000 دج</div>
+                <div class="modal-location">
+                    <i class="fas fa-map-marker-alt"></i>
+                    <span>وهران</span>
+                </div>
+                <h3 class="modal-subtitle">مواصفات السيارة</h3>
+                <p class="modal-text">سيارة مرسيدس E200 موديل 2018، بحالة ممتازة جدا، مسافة المقطوعة 45,000 كم فقط، لون أسود من الداخل والخارج، فبريكا كامل، ضمان الوكالة حتى 2025.</p>
+                <p class="modal-text">السيارة مجهزة بكل وسائل الراحة والسلامة: شاشة لمس، كاميرا خلفية، نظام ملاحة، مقاعد جلد طبيعي، تحكم في السرعة، تكييف أوتوماتيكي، نظام صوتي هارمان كاردون.</p>
+                
+                <h3 class="modal-subtitle">معلومات إضافية</h3>
+                <div class="modal-features">
+                    <div class="feature-item">
+                        <i class="fas fa-tachometer-alt feature-icon"></i>
+                        <span>45,000 كم</span>
+                    </div>
+                    <div class="feature-item">
+                        <i class="fas fa-calendar-alt feature-icon"></i>
+                        <span>2018</span>
+                    </div>
+                    <div class="feature-item">
+                        <i class="fas fa-gas-pump feature-icon"></i>
+                        <span>بنزين</span>
+                    </div>
+                    <div class="feature-item">
+                        <i class="fas fa-cogs feature-icon"></i>
+                        <span>أوتوماتيك</span>
+                    </div>
+                    <div class="feature-item">
+                        <i class="fas fa-horse-head feature-icon"></i>
+                        <span>184 حصان</span>
+                    </div>
+                    <div class="feature-item">
+                        <i class="fas fa-paint-brush feature-icon"></i>
+                        <span>أسود</span>
+                    </div>
+                </div>
+                
+                <div class="modal-btns">
+                    <a href="tel:+213123456789" class="btn">اتصل بالبائع</a>
+                    <a href="#" class="btn btn-outline">طلب معاينة</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal 3 - Electronics -->
+    <div class="modal-overlay" id="modal3">
+        <div class="modal">
+            <button class="modal-close">&times;</button>
+            <div class="modal-content">
+                <img src="https://images.unsplash.com/photo-1555774698-0b77e0d5fac6?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80" alt="هاتف سامسونج جديد" class="modal-img">
+                <h2 class="modal-title">Samsung Galaxy S24 Ultra</h2>
+                <div class="modal-price">120,000 دج</div>
+                <div class="modal-location">
+                    <i class="fas fa-map-marker-alt"></i>
+                    <span>قسنطينة</span>
+                </div>
+                <h3 class="modal-subtitle">مواصفات الجهاز</h3>
+                <p class="modal-text">هاتف Samsung Galaxy S24 Ultra جديد بالعلبة، ضمان رسمي لمدة سنتين، ذاكرة 256GB، RAM 12GB، شاشة Dynamic AMOLED 2X بحجم 6.8 بوصة بدقة 1440x3200 بكسل.</p>
+                <p class="modal-text">الجهاز مقاوم للماء والغبار بشهادة IP68، بطارية 5000mAh، شاحن سريع 45W، كاميرا خلفية رباعية 108MP + 12MP + 10MP + 10MP، كاميرا أمامية 40MP، مع قلم S-Pen.</p>
+                
+                <h3 class="modal-subtitle">معلومات إضافية</h3>
+                <div class="modal-features">
+                    <div class="feature-item">
+                        <i class="fas fa-microchip feature-icon"></i>
+                        <span>Snapdragon 8 Gen 3</span>
+                    </div>
+                    <div class="feature-item">
+                        <i class="fas fa-memory feature-icon"></i>
+                        <span>256GB / 12GB</span>
+                    </div>
+                    <div class="feature-item">
+                        <i class="fas fa-mobile-alt feature-icon"></i>
+                        <span>6.8 بوصة</span>
+                    </div>
+                    <div class="feature-item">
+                        <i class="fas fa-battery-full feature-icon"></i>
+                        <span>5000mAh</span>
+                    </div>
+                    <div class="feature-item">
+                        <i class="fas fa-camera feature-icon"></i>
+                        <span>108MP</span>
+                    </div>
+                    <div class="feature-item">
+                        <i class="fas fa-palette feature-icon"></i>
+                        <span>أسود</span>
+                    </div>
+                </div>
+                
+                <div class="modal-btns">
+                    <a href="tel:+213123456789" class="btn">اتصل بالبائع</a>
+                    <a href="#" class="btn btn-outline">إضافة للسلة</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal 4 - Jobs -->
+    <div class="modal-overlay" id="modal4">
+        <div class="modal">
+            <button class="modal-close">&times;</button>
+            <div class="modal-content">
+                <img src="https://images.unsplash.com/photo-1521791136064-7986c2920216?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80" alt="وظيفة مطور ويب" class="modal-img">
+                <h2 class="modal-title">مطلوب مطور ويب</h2>
+                <div class="modal-price">150,000 - 200,000 دج</div>
+                <div class="modal-location">
+                    <i class="fas fa-map-marker-alt"></i>
+                    <span>عنابة</span>
+                </div>
+                <h3 class="modal-subtitle">وصف الوظيفة</h3>
+                <p class="modal-text">شركة ناشئة في مجال التكنولوجيا تبحث عن مطور ويب متمرس للانضمام إلى فريق العمل. المسؤوليات تشمل تطوير وتنفيذ واجهات المستخدم وتجربة المستخدم لمواقع الويب والتطبيقات، العمل مع فريق التصميم لتحويل النماذج إلى كود فعال، وصيانة وتحسين المواقع الحالية.</p>
+                <p class="modal-text">نقدم بيئة عمل ديناميكية، فرص للتطور الوظيفي، مشاريع متنوعة وتحديات تقنية ممتعة، بالإضافة إلى حوافز أداء ومزايا اجتماعية.</p>
+                
+                <h3 class="modal-subtitle">المتطلبات</h3>
+                <div class="modal-features">
+                    <div class="feature-item">
+                        <i class="fas fa-check-circle feature-icon"></i>
+                        <span>خبرة في React.js وNode.js</span>
+                    </div>
+                    <div class="feature-item">
+                        <i class="fas fa-check-circle feature-icon"></i>
+                        <span>فهم جيد لـ RESTful APIs</span>
+                    </div>
+                    <div class="feature-item">
+                        <i class="fas fa-check-circle feature-icon"></i>
+                        <span>معرفة بقواعد البيانات SQL/NoSQL</span>
+                    </div>
+                    <div class="feature-item">
+                        <i class="fas fa-check-circle feature-icon"></i>
+                        <span>خبرة في أنظمة التحكم بالإصدار Git</span>
+                    </div>
+                    <div class="feature-item">
+                        <i class="fas fa-check-circle feature-icon"></i>
+                        <span>إجادة اللغة الإنجليزية</span>
+                    </div>
+                    <div class="feature-item">
+                        <i class="fas fa-check-circle feature-icon"></i>
+                        <span>خبرة 3 سنوات على الأقل</span>
+                    </div>
+                </div>
+                
+                <div class="modal-btns">
+                    <a href="tel:+213123456789" class="btn">التقدم للوظيفة</a>
+                    <a href="#" class="btn btn-outline">حفظ الإعلان</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal 5 - Services -->
+    <div class="modal-overlay" id="modal5">
+        <div class="modal">
+            <button class="modal-close">&times;</button>
+            <div class="modal-content">
+                <img src="https://i.pinimg.com/736x/22/2d/3a/222d3a6739cd52dd76765b53ab92221a.jpg" alt="خدمات كهربائية" class="modal-img">
+                <h2 class="modal-title">فني كهرباء منازل</h2>
+                <div class="modal-price">يبدأ من 3,000 دج</div>
+                <div class="modal-location">
+                    <i class="fas fa-map-marker-alt"></i>
+                    <span>الجزائر العاصمة</span>
+                </div>
+                <h3 class="modal-subtitle">وصف الخدمة</h3>
+                <p class="modal-text">فني كهرباء معتمد وذو خبرة أكثر من 10 سنوات في مجال الكهرباء المنزلية والصناعية. نقدم جميع خدمات الكهرباء المنزلية باحترافية وجودة عالية، مع ضمان على جميع الأعمال.</p>
+                <p class="modal-text">خدمة 24/7 لجميع أنحاء العاصمة، مع سرعة في الاستجابة وجودة في الأداء. نستخدم فقط مواد ومعدات عالية الجودة ومرخصة، مع تقديم فواتير ضريبية عند الطلب.</p>
+                
+                <h3 class="modal-subtitle">الخدمات المقدمة</h3>
+                <div class="modal-features">
+                    <div class="feature-item">
+                        <i class="fas fa-bolt feature-icon"></i>
+                        <span>تركيب وصيانة لوحات الكهرباء</span>
+                    </div>
+                    <div class="feature-item">
+                        <i class="fas fa-lightbulb feature-icon"></i>
+                        <span>تركيب الإنارة الداخلية والخارجية</span>
+                    </div>
+                    <div class="feature-item">
+                        <i class="fas fa-plug feature-icon"></i>
+                        <span>إصلاح الأعطال الكهربائية</span>
+                    </div>
+                    <div class="feature-item">
+                        <i class="fas fa-tv feature-icon"></i>
+                        <span>تركيب أنظمة الإنذار والكاميرات</span>
+                    </div>
+                    <div class="feature-item">
+                        <i class="fas fa-solar-panel feature-icon"></i>
+                        <span>تركيب أنظمة الطاقة الشمسية</span>
+                    </div>
+                    <div class="feature-item">
+                        <i class="fas fa-home feature-icon"></i>
+                        <span>تمديدات كهربائية للمنازل الجديدة</span>
+                    </div>
+                </div>
+                
+                <div class="modal-btns">
+                    <a href="tel:+213123456789" class="btn">اتصل الآن</a>
+                    <a href="#" class="btn btn-outline">طلب خدمة</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal 6 - Fashion -->
+    <div class="modal-overlay" id="modal6">
+        <div class="modal">
+            <button class="modal-close">&times;</button>
+            <div class="modal-content">
+                <img src="https://images.unsplash.com/photo-1489987707025-afc232f7ea0f?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80" alt="ملابس تقليدية" class="modal-img">
+                <h2 class="modal-title">قشابية جزائرية فاخرة</h2>
+                <div class="modal-price">25,000 دج</div>
+                <div class="modal-location">
+                    <i class="fas fa-map-marker-alt"></i>
+                    <span>تلمسان</span>
+                </div>
+                <h3 class="modal-subtitle">وصف المنتج</h3>
+                <p class="modal-text">قشابية جزائرية تقليدية من صنع حرفيين محليين في تلمسان، مصنوعة يدوياً من الصوف الطبيعي عالي الجودة، بتصميم كلاسيكي أنيق يناسب جميع المناسبات.</p>
+                <p class="modal-text">متوفرة بمقاسات مختلفة (S, M, L, XL)، وبألوان متعددة (أسود، بيج، رمادي، كحلي). يمكن طلب ألوان خاصة حسب الطلب بزيادة 10% على السعر.</p>
+                
+                <h3 class="modal-subtitle">مميزات المنتج</h3>
+                <div class="modal-features">
+                    <div class="feature-item">
+                        <i class="fas fa-tshirt feature-icon"></i>
+                        <span>صوف طبيعي 100%</span>
+                    </div>
+                    <div class="feature-item">
+                        <i class="fas fa-ruler feature-icon"></i>
+                        <span>مقاسات متعددة</span>
+                    </div>
+                    <div class="feature-item">
+                        <i class="fas fa-palette feature-icon"></i>
+                        <span>ألوان متنوعة</span>
+                    </div>
+                    <div class="feature-item">
+                        <i class="fas fa-hand-paper feature-icon"></i>
+                        <span>صنع يدوي</span>
+                    </div>
+                    <div class="feature-item">
+                        <i class="fas fa-medal feature-icon"></i>
+                        <span>جودة عالية</span>
+                    </div>
+                    <div class="feature-item">
+                        <i class="fas fa-gift feature-icon"></i>
+                        <span>تغليف هدية</span>
+                    </div>
+                </div>
+                
+                <div class="modal-btns">
+                    <a href="tel:+213123456789" class="btn">اطلب الآن</a>
+                    <a href="#" class="btn btn-outline">إضافة للسلة</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal 7 - Furniture -->
+    <div class="modal-overlay" id="modal7">
+        <div class="modal">
+            <button class="modal-close">&times;</button>
+            <div class="modal-content">
+                <img src="https://images.unsplash.com/photo-1555041469-a586c61ea9bc?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80" alt="أثاث منزلي" class="modal-img">
+                <h2 class="modal-title">طقم صالون إيطالي فاخر</h2>
+                <div class="modal-price">350,000 دج</div>
+                <div class="modal-location">
+                    <i class="fas fa-map-marker-alt"></i>
+                    <span>بجاية</span>
+                </div>
+                <h3 class="modal-subtitle">وصف المنتج</h3>
+                <p class="modal-text">طقم صالون إيطالي فاخر من الجلد الطبيعي عالي الجودة، يتكون من 3 مقاعد + 2 مقاعد + 1 مقعد، مع طاولة قهوة مصاحبة. اللون بني كلاسيكي يناسب جميع الديكورات.</p>
+                <p class="modal-text">التصميم مريح وعصري، مع تفاصيل دقيقة وحشوات فاخرة. الإطار مصنوع من خشب الزان الصلب المقاوم للوزن والاستخدام اليومي. الضمان 3 سنوات على الهيكل وسنتين على الجلد.</p>
+                
+                <h3 class="modal-subtitle">مواصفات المنتج</h3>
+                <div class="modal-features">
+                    <div class="feature-item">
+                        <i class="fas fa-couch feature-icon"></i>
+                        <span>3+2+1</span>
+                    </div>
+                    <div class="feature-item">
+                        <i class="fas fa-leather feature-icon"></i>
+                        <span>جلد طبيعي</span>
+                    </div>
+                    <div class="feature-item">
+                        <i class="fas fa-palette feature-icon"></i>
+                        <span>بني</span>
+                    </div>
+                    <div class="feature-item">
+                        <i class="fas fa-ruler-combined feature-icon"></i>
+                        <span>مقاس كبير</span>
+                    </div>
+                    <div class="feature-item">
+                        <i class="fas fa-truck feature-icon"></i>
+                        <span>توصيل مجاني</span>
+                    </div>
+                    <div class="feature-item">
+                        <i class="fas fa-shield-alt feature-icon"></i>
+                        <span>ضمان 3 سنوات</span>
+                    </div>
+                </div>
+                
+                <div class="modal-btns">
+                    <a href="tel:+213123456789" class="btn">اتصل الآن</a>
+                    <a href="#" class="btn btn-outline">طلب معاينة</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal 8 - Education -->
+    <div class="modal-overlay" id="modal8">
+        <div class="modal">
+            <button class="modal-close">&times;</button>
+            <div class="modal-content">
+                <img src="https://images.unsplash.com/photo-1523050854058-8df90110c9f1?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80" alt="دورات تعليمية" class="modal-img">
+                <h2 class="modal-title">دورات تعلم البرمجة المكثفة</h2>
+                <div class="modal-price">30,000 دج/الشهر</div>
+                <div class="modal-location">
+                    <i class="fas fa-map-marker-alt"></i>
+                    <span>سطيف</span>
+                </div>
+                <h3 class="modal-subtitle">وصف الدورة</h3>
+                <p class="modal-text">مركز التدريب التقني يقدم دورات مكثفة في تطوير الويب والهواتف الذكية، مع مدربين معتمدين وذوي خبرة واسعة في المجال. البرامج مصممة لتأهيل الطلاب لسوق العمل مباشرة.</p>
+                <p class="modal-text">الدورات تشمل الجانب النظري والتطبيقي العملي، مع مشاريع حقيقية وتدريب على العمل ضمن فريق. في نهاية الدورة يحصل الطالب على شهادة معتمدة ومساعدة في إعداد السيرة الذاتية والبحث عن عمل.</p>
+                
+                <h3 class="modal-subtitle">التخصصات المتاحة</h3>
+                <div class="modal-features">
+                    <div class="feature-item">
+                        <i class="fas fa-laptop-code feature-icon"></i>
+                        <span>تطوير الويب (HTML, CSS, JS)</span>
+                    </div>
+                    <div class="feature-item">
+                        <i class="fas fa-mobile-alt feature-icon"></i>
+                        <span>تطبيقات Android</span>
+                    </div>
+                    <div class="feature-item">
+                        <i class="fab fa-react feature-icon"></i>
+                        <span>React.js</span>
+                    </div>
+                    <div class="feature-item">
+                        <i class="fab fa-node-js feature-icon"></i>
+                        <span>Node.js</span>
+                    </div>
+                    <div class="feature-item">
+                        <i class="fas fa-database feature-icon"></i>
+                        <span>قواعد البيانات</span>
+                    </div>
+                    <div class="feature-item">
+                        <i class="fas fa-code-branch feature-icon"></i>
+                        <span>Git & GitHub</span>
+                    </div>
+                </div>
+                
+                <div class="modal-btns">
+                    <a href="tel:+213123456789" class="btn">سجل الآن</a>
+                    <a href="#" class="btn btn-outline">طلب معلومات</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal 9 - Agriculture -->
+    <div class="modal-overlay" id="modal9">
+        <div class="modal">
+            <button class="modal-close">&times;</button>
+            <div class="modal-content">
+                <img src="https://images.unsplash.com/photo-1500382017468-9049fed747ef?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80" alt="معدات زراعية" class="modal-img">
+                <h2 class="modal-title">جرار زراعي John Deere 2024</h2>
+                <div class="modal-price">8,500,000 دج</div>
+                <div class="modal-location">
+                    <i class="fas fa-map-marker-alt"></i>
+                    <span>البليدة</span>
+                </div>
+                <h3 class="modal-subtitle">وصف المنتج</h3>
+                <p class="modal-text">جرار زراعي جديد من ماركة John Deere العالمية، موديل 2024، قوة 120 حصان، محرك ديزل 4 سلندر، ناقل حركة أوتوماتيكي بـ 16 سرعة أمامية و16 سرعة خلفية.</p>
+                <p class="modal-text">الجرار مجهز بأحدث التقنيات بما في ذلك نظام GPS للزراعة الدقيقة، كابينة مكيفة، نظام تعليق هيدروليكي، إضاءة LED، ونظام مراقبة ضغط الإطارات. السعر يشمل التركيب والضمان لمدة 3 سنوات أو 3000 ساعة عمل.</p>
+                
+                <h3 class="modal-subtitle">المواصفات الفنية</h3>
+                <div class="modal-features">
+                    <div class="feature-item">
+                        <i class="fas fa-horse-head feature-icon"></i>
+                        <span>120 حصان</span>
+                    </div>
+                    <div class="feature-item">
+                        <i class="fas fa-gas-pump feature-icon"></i>
+                        <span>ديزل</span>
+                    </div>
+                    <div class="feature-item">
+                        <i class="fas fa-cogs feature-icon"></i>
+                        <span>أوتوماتيك 16+16</span>
+                    </div>
+                    <div class="feature-item">
+                        <i class="fas fa-satellite-dish feature-icon"></i>
+                        <span>نظام GPS</span>
+                    </div>
+                    <div class="feature-item">
+                        <i class="fas fa-snowflake feature-icon"></i>
+                        <span>كابينة مكيفة</span>
+                    </div>
+                    <div class="feature-item">
+                        <i class="fas fa-shield-alt feature-icon"></i>
+                        <span>ضمان 3 سنوات</span>
+                    </div>
+                </div>
+                
+                <div class="modal-btns">
+                    <a href="tel:+213123456789" class="btn">اتصل الآن</a>
+                    <a href="#" class="btn btn-outline">طلب عرض سعر</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal 10 - Pets -->
+    <div class="modal-overlay" id="modal10">
+        <div class="modal">
+            <button class="modal-close">&times;</button>
+            <div class="modal-content">
+                <img src="https://images.unsplash.com/photo-1586671267731-da2cf3ceeb80?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80" alt="كلاب للبيع" class="modal-img">
+                <h2 class="modal-title">جراء جيرمن شيبرد</h2>
+                <div class="modal-price">50,000 دج</div>
+                <div class="modal-location">
+                    <i class="fas fa-map-marker-alt"></i>
+                    <span>باتنة</span>
+                </div>
+                <h3 class="modal-subtitle">وصف الجراء</h3>
+                <p class="modal-text">جراء جيرمن شيبرد (الراعي الألماني) سلالة نقية، عمر شهرين، مطعمة بالكامل وجاهزة للتسليم. الأبوان معروفي النسب وذوي مواصفات ممتازة من حيث البنية والشخصية.</p>
+                <p class="modal-text">الجراء تتمتع بصحة ممتازة، تم فحصها من قبل طبيب بيطري، ومزودة بشهادة صحية وبطاقة تطعيمات. متوفرة ذكور وإناث، ألوان متنوعة (أسود، بني، أسود-بني).</p>
+                
+                <h3 class="modal-subtitle">معلومات إضافية</h3>
+                <div class="modal-features">
+                    <div class="feature-item">
+                        <i class="fas fa-birthday-cake feature-icon"></i>
+                        <span>عمر شهرين</span>
+                    </div>
+                    <div class="feature-item">
+                        <i class="fas fa-syringe feature-icon"></i>
+                        <span>مطعمة بالكامل</span>
+                    </div>
+                    <div class="feature-item">
+                        <i class="fas fa-dna feature-icon"></i>
+                        <span>سلالة نقية</span>
+                    </div>
+                    <div class="feature-item">
+                        <i class="fas fa-venus-mars feature-icon"></i>
+                        <span>ذكور وإناث</span>
+                    </div>
+                    <div class="feature-item">
+                        <i class="fas fa-file-medical feature-icon"></i>
+                        <span>شهادة صحية</span>
+                    </div>
+                    <div class="feature-item">
+                        <i class="fas fa-paw feature-icon"></i>
+                        <span>هادئة ومطيعة</span>
+                    </div>
+                </div>
+                
+                <div class="modal-btns">
+                    <a href="tel:+213123456789" class="btn">اتصل الآن</a>
+                    <a href="#" class="btn btn-outline">طلب معاينة</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        // Language Switching
+        const arBtn = document.getElementById('arBtn');
+        const frBtn = document.getElementById('frBtn');
+        const body = document.body;
+
+        // French translations
+        const translations = {
+            "DZADS": "DZADS",
+            "إعلانات مميزة": "Annonces en Vedette",
+            "الرئيسية": "Accueil",
+            "التصنيفات": "Catégories",
+            "حسب المدن": "Par Villes",
+            "الخدمات": "Services",
+            "المدونة": "Blog",
+            "اتصل بنا": "Contact",
+            "إحصائياتنا": "Nos Statistiques",
+            "إعلان نشط": "Annonce Active",
+            "ولاية جزائرية": "Wilaya Algérienne",
+            "زائر شهري": "Visiteurs Mensuels",
+            "تصنيف رئيسي": "Catégorie Principale",
+            "روابط سريعة": "Liens Rapides",
+            "المدن الرئيسية": "Villes Principales",
+            "الجزائر العاصمة": "Alger",
+            "وهران": "Oran",
+            "قسنطينة": "Constantine",
+            "عنابة": "Annaba",
+            "بجاية": "Béjaïa",
+            "تيزي وزو": "Tizi Ouzou",
+            "تصنيفات رئيسية": "Catégories Principales",
+            "عقارات": "Immobilier",
+            "سيارات": "Voitures",
+            "إلكترونيات": "Électronique",
+            "وظائف": "Emplois",
+            "خدمات": "Services",
+            "أزياء": "Mode",
+            "المنصة الأولى للإعلانات المبوبة في الجزائر، نوفر لك مساحة لعرض منتجاتك وخدماتك": "La première plateforme de petites annonces en Algérie, nous vous offrons un espace pour afficher vos produits et services",
+            "© 2025 DZADS. جميع الحقوق محفوظة. | AW Studio": "© 2025 DZADS. Tous droits réservés. | AW Studio"
+        };
+
+        frBtn.addEventListener('click', () => {
+            body.setAttribute('dir', 'ltr');
+            arBtn.classList.remove('active');
+            frBtn.classList.add('active');
+            
+            // Update all text elements
+            document.querySelectorAll('[data-ar]').forEach(el => {
+                const key = el.getAttribute('data-ar');
+                if (translations[key]) {
+                    el.textContent = translations[key];
+                }
+            });
+            
+            // Update navigation
+            document.querySelector('.logo').textContent = 'DZADS';
+        });
+
+        arBtn.addEventListener('click', () => {
+            body.setAttribute('dir', 'rtl');
+            frBtn.classList.remove('active');
+            arBtn.classList.add('active');
+            
+            // Reset all text to Arabic
+            document.querySelector('.logo').textContent = 'DZADS';
+            
+            // You would need to reset other elements similarly
+        });
+
+        // Mobile Menu Toggle
+        const mobileMenuBtn = document.getElementById('mobileMenuBtn');
+        const nav = document.getElementById('nav');
+
+        mobileMenuBtn.addEventListener('click', () => {
+            nav.classList.toggle('active');
+            mobileMenuBtn.textContent = nav.classList.contains('active') ? '✕' : '☰';
+        });
+
+        // Close mobile menu when clicking a link
+        document.querySelectorAll('nav a').forEach(link => {
+            link.addEventListener('click', () => {
+                nav.classList.remove('active');
+                mobileMenuBtn.textContent = '☰';
+            });
+        });
+
+        // Header scroll effect
+        const header = document.getElementById('header');
+        window.addEventListener('scroll', () => {
+            if (window.scrollY > 50) {
+                header.classList.add('scrolled');
+            } else {
+                header.classList.remove('scrolled');
+            }
+        });
+
+        // Smooth scrolling for anchor links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function(e) {
+                e.preventDefault();
+                const targetId = this.getAttribute('href');
+                if (targetId === '#') return;
+                
+                const targetElement = document.querySelector(targetId);
+                if (targetElement) {
+                    window.scrollTo({
+                        top: targetElement.offsetTop - 80,
+                        behavior: 'smooth'
+                    });
+                }
+            });
+        });
+
+        // Modal functionality
+        document.querySelectorAll('.ad-card').forEach(card => {
+            card.addEventListener('click', function() {
+                const modalId = this.getAttribute('data-modal');
+                const modal = document.getElementById(modalId);
+                modal.classList.add('active');
+                document.body.style.overflow = 'hidden';
+            });
+        });
+
+        document.querySelectorAll('.modal-close').forEach(closeBtn => {
+            closeBtn.addEventListener('click', function() {
+                const modal = this.closest('.modal-overlay');
+                modal.classList.remove('active');
+                document.body.style.overflow = 'auto';
+            });
+        });
+
+        // Close modal when clicking outside content
+        document.querySelectorAll('.modal-overlay').forEach(modal => {
+            modal.addEventListener('click', function(e) {
+                if (e.target === this) {
+                    this.classList.remove('active');
+                    document.body.style.overflow = 'auto';
+                }
+            });
+        });
+
+        // Animation on scroll for stats
+        const animateStatsOnScroll = () => {
+            const statItems = document.querySelectorAll('.stat-item');
+            const statsSection = document.querySelector('.stats');
+            const sectionPosition = statsSection.getBoundingClientRect().top;
+            const screenPosition = window.innerHeight / 1.2;
+            
+            if (sectionPosition < screenPosition) {
+                statItems.forEach((item, index) => {
+                    setTimeout(() => {
+                        item.classList.add('animated');
+                    }, index * 200);
+                });
+            }
+        };
+
+        // Run once on load
+        animateStatsOnScroll();
+
+        // Run on scroll
+        window.addEventListener('scroll', animateStatsOnScroll);
+
+        // Hide website buttons where not needed
+        document.querySelectorAll('.no-website').forEach(btn => {
+            btn.style.display = 'none';
+        });
+    </script>
+</body>
+</html>
